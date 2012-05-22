@@ -22,12 +22,8 @@ public class Spielfeld
 			}
 		}
 		//und natürlich dem Bomberman einen Startplatz geben 
-<<<<<<< HEAD
 		//this.feldArray[1][1] = Konstanten.FELD_BOMBERMAN;
 		// wir machen es jetzt separat in Bombmann
-=======
-		this.feldArray[1][1] = Konstanten.FELD_BOMBERMAN;
->>>>>>> bec834a38603c1de4dd6926ecc6b6b3837be76d1
 	}
 	// setze unkaputtbar-Mäuerchen 
 	public void SetzeSpielfeldMeilenstein1()
@@ -59,7 +55,6 @@ public class Spielfeld
 			{
 				this.feldArray[m][n] = Konstanten.FELD_FESTE_MAUER;
 			}
-<<<<<<< HEAD
 
 		//test codes, please delete before release ----------
 		//this.feldArray[1][1] = Konstanten.FELD_FESTE_MAUER;
@@ -71,14 +66,4 @@ public class Spielfeld
 	}
 	
 
-=======
-		
-	}
-	
-
-	// HIER BITTE DAS BOMBERMÄNNEKEN LAUFEN LASSEN!! 
-	
-
-	
->>>>>>> bec834a38603c1de4dd6926ecc6b6b3837be76d1
 }
