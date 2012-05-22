@@ -10,7 +10,10 @@ public class Logik implements KeyListener
 {
 	private Spielfeld spielfeld;
 	private Oberflaeche oberflaeche;	
+<<<<<<< HEAD
 	private Bombmann bombmann;
+=======
+>>>>>>> bec834a38603c1de4dd6926ecc6b6b3837be76d1
 	
 	public Logik()
 	{
@@ -24,6 +27,7 @@ public class Logik implements KeyListener
 		
 		this.spielfeld = new Spielfeld();
 		this.spielfeld.SetzeSpielfeldMeilenstein1();
+<<<<<<< HEAD
 		//Bombmann initialisierung
 		try {
 			this.bombmann = new Bombmann(this.spielfeld);
@@ -36,6 +40,10 @@ public class Logik implements KeyListener
 		//Bombmann initialisierung Ende.
 		this.oberflaeche.ZeichneSpielfeld(this.spielfeld);
 		
+=======
+		
+		this.oberflaeche.ZeichneSpielfeld(this.spielfeld);
+>>>>>>> bec834a38603c1de4dd6926ecc6b6b3837be76d1
 	}
 	
 	
@@ -45,6 +53,7 @@ public class Logik implements KeyListener
 	@Override
 	public void keyPressed(KeyEvent e) {
 	// TODO Auto-generated method stub
+<<<<<<< HEAD
 		
 		//Bombmann steuerung.
 	    if (e.getKeyCode() == KeyEvent.VK_RIGHT ) {
@@ -58,6 +67,8 @@ public class Logik implements KeyListener
 	    }
 	    this.oberflaeche.ZeichneSpielfeld(this.spielfeld);
 	  //Bombmann steuerung Ende.
+=======
+>>>>>>> bec834a38603c1de4dd6926ecc6b6b3837be76d1
 	}
 
 	@Override
