@@ -79,8 +79,8 @@ public class Bombmann extends Gegenstand {
 	{
 		int x = this.getX();
 		int y = this.getY();
-		if (this.s.feldArray[x][y] == Konstanten.FELD_BOMBERMAN && y > 1) {
-			if (this.s.feldArray[x][y - 1] == Konstanten.FELD_FREI) {
+		if (y > 1) {
+                        if (this.s.begehbar(x, y-1)==true) {
 				this.s.feldArray[x][y] = Konstanten.FELD_FREI;
 				this.s.feldArray[x][y - 1] = Konstanten.FELD_BOMBERMAN;
 				this.setY(y - 1);
@@ -91,9 +91,8 @@ public class Bombmann extends Gegenstand {
 	{
 		int x = this.getX();
 		int y = this.getY();
-		if (this.s.feldArray[x][y] == Konstanten.FELD_BOMBERMAN 
-				&& y < Konstanten.FELD_ANZAHL_SPALTEN - 1) {
-			if (this.s.feldArray[x][y + 1] == Konstanten.FELD_FREI) {
+		if (y < Konstanten.FELD_ANZAHL_SPALTEN - 1) {
+			if (this.s.begehbar(x, y+1)==true) {
 				this.s.feldArray[x][y] = Konstanten.FELD_FREI;
 				this.s.feldArray[x][y + 1] = Konstanten.FELD_BOMBERMAN;
 				this.setY(y + 1);
@@ -105,8 +104,8 @@ public class Bombmann extends Gegenstand {
 	{
 		int x = this.getX();
 		int y = this.getY();
-		if (this.s.feldArray[x][y] == Konstanten.FELD_BOMBERMAN && x > 1) {
-			if (this.s.feldArray[x - 1][y] == Konstanten.FELD_FREI) {
+		if (x > 1) {
+			if (this.s.begehbar(x-1, y)==true) {
 				this.s.feldArray[x][y] = Konstanten.FELD_FREI;
 				this.s.feldArray[x - 1][y] = Konstanten.FELD_BOMBERMAN;
 				this.setX(x - 1);
@@ -117,9 +116,8 @@ public class Bombmann extends Gegenstand {
 	{
 		int x = this.getX();
 		int y = this.getY();
-		if (this.s.feldArray[x][y] == Konstanten.FELD_BOMBERMAN 
-				&& x < Konstanten.FELD_ANZAHL_ZEILEN - 1) {
-			if (this.s.feldArray[x + 1][y] == Konstanten.FELD_FREI) {
+		if (x < Konstanten.FELD_ANZAHL_ZEILEN - 1) {
+			if (this.s.begehbar(x+1, y)==true) {
 				this.s.feldArray[x][y] = Konstanten.FELD_FREI;
 				this.s.feldArray[x + 1][y] = Konstanten.FELD_BOMBERMAN;
 				this.setX(x + 1);

@@ -21,11 +21,17 @@ public class Spielfeld
 				feldArray [i][j] = Konstanten.FELD_FREI;
 			}
 		}
-		//und natürlich dem Bomberman einen Startplatz geben 
+		//und natï¿½rlich dem Bomberman einen Startplatz geben 
 		//this.feldArray[1][1] = Konstanten.FELD_BOMBERMAN;
 		// wir machen es jetzt separat in Bombmann
 	}
-	// setze unkaputtbar-Mäuerchen 
+        
+        public boolean begehbar(int x, int y)
+        {
+            return ((feldArray[x][y]==Konstanten.FELD_FREI)&&(Bombe.bombTable[x][y]==null));
+        }
+        
+	// setze unkaputtbar-Maeuerchen 
 	public void SetzeSpielfeldMeilenstein1()
 	{
 		this.Initialisieren();

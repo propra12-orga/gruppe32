@@ -4,7 +4,7 @@ import java.awt.event.KeyListener;
   /*von hier aus geht's los,
    * Spielfeld machen und Oberflaeche machen
    * Spielfeld als untere Schicht, 
-   * auf der die Oberfläche "gebaut" wird
+   * auf der die Oberflï¿½che "gebaut" wird
    */
 public class Logik implements KeyListener
 {
@@ -33,14 +33,17 @@ public class Logik implements KeyListener
 			System.out.println(e.getMessage());
 			//System.exit(0);
 		}
+                // bombe initialisieren
+                Bombe.init(this.spielfeld,this.oberflaeche);
+		
 		//Bombmann initialisierung Ende.
 		this.oberflaeche.ZeichneSpielfeld(this.spielfeld);
-		
+                
 	}
 	
 	
  //Hier Spielfeld neu zeichnen nach KeyEvent zett.Beh. aktualisiere Spielfeld nach Zug.
- //vorerst nur keyPressed nötig	
+ //vorerst nur keyPressed nï¿½tig	
 	
 	@Override
 	public void keyPressed(KeyEvent e) {
@@ -55,7 +58,10 @@ public class Logik implements KeyListener
 	    	this.bombmann.moveUp();
 	    } else if (e.getKeyCode() == KeyEvent.VK_DOWN ) {
 	    	this.bombmann.moveDown();
-	    }
+	    } else if (e.getKeyCode() == KeyEvent.VK_SPACE )
+            {
+                Bombe foo = new Bombe(this.bombmann.getX(),this.bombmann.getY(),3,3.0,0);
+            }
 	    this.oberflaeche.ZeichneSpielfeld(this.spielfeld);
 	  //Bombmann steuerung Ende.
 	}
@@ -72,7 +78,7 @@ public class Logik implements KeyListener
 
 
 
-// und prüfen, ob dann der Spielzug auch klar geht
+// und prï¿½fen, ob dann der Spielzug auch klar geht
 	private Boolean PruefeSpielzug()
 	{
 	//TODO 

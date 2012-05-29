@@ -33,6 +33,7 @@ public class Oberflaeche extends JFrame
 	{
 		this.imageIconHashMap = new HashMap<String, ImageIcon>();
 		
+                this.imageIconHashMap.put(Konstanten.FELD_BOMBE, new ImageIcon("Bilder/Bombe.png"));
 		this.imageIconHashMap.put(Konstanten.FELD_FESTE_MAUER, new ImageIcon("Bilder/unkaputtbar.gif"));
 		this.imageIconHashMap.put(Konstanten.FELD_FREI, new ImageIcon("Bilder/frei.jpg"));
 		this.imageIconHashMap.put(Konstanten.FELD_BOMBERMAN, new ImageIcon("Bilder" +
@@ -192,7 +193,12 @@ return menuBar;
 			{
 				ImageIcon aktuellesFeldIcon = new ImageIcon();
 				String schluesselFeldInhalt = spielfeld.feldArray[i][j];
-				aktuellesFeldIcon = this.imageIconHashMap.get(schluesselFeldInhalt);
+                                if (Bombe.bombTable[i][j]==null)
+                                {
+                                    aktuellesFeldIcon = this.imageIconHashMap.get(schluesselFeldInhalt);
+                                } else {
+                                    aktuellesFeldIcon = this.imageIconHashMap.get(Konstanten.FELD_BOMBE);
+                                }
 				
 				JLabel anzeigeLabel = new JLabel(aktuellesFeldIcon);
 				panelMitSpielfeld.add(anzeigeLabel);

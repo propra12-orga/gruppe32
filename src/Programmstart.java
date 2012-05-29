@@ -12,7 +12,7 @@ public class Programmstart {
 		}
 		catch (Exception exc)
 		{
-		
+                    System.out.println("Exception Caught!");
 		}
 	}
 }
