@@ -29,6 +29,7 @@ public class Spielfeld
 				feldArray [i][j] = Konstanten.FELD_FREI;
 			}
 		}
+<<<<<<< HEAD
 		
 	}
         
@@ -127,6 +128,19 @@ public class Spielfeld
     }
         
 	
+=======
+		//und nat�rlich dem Bomberman einen Startplatz geben 
+		//this.feldArray[1][1] = Konstanten.FELD_BOMBERMAN;
+		// wir machen es jetzt separat in Bombmann
+	}
+        
+        public boolean begehbar(int x, int y)
+        {
+            return ((feldArray[x][y]==Konstanten.FELD_FREI)&&(Bombe.bombTable[x][y]==null));
+        }
+        
+	// setze unkaputtbar-Maeuerchen 
+>>>>>>> 7604a93fa1f456f9bb4f4074357bd3658e3df8f0
 	public void SetzeSpielfeldMeilenstein1()
 	{
 		this.Initialisieren();
@@ -187,6 +201,7 @@ public class Spielfeld
 			for (int n = 2; n < Konstanten.FELD_ANZAHL_SPALTEN; n+=3)
 			{
 				this.feldArray[m][n] = Konstanten.FELD_FESTE_MAUER;
+<<<<<<< HEAD
 				
 				System.out.print("<zelle><koordinate_x>");
 				System.out.print(m);
@@ -208,4 +223,18 @@ public class Spielfeld
 	}
 
 
+=======
+			}
+
+		//test codes, please delete before release ----------
+		//this.feldArray[1][1] = Konstanten.FELD_FESTE_MAUER;
+		//this.feldArray[2][1] = Konstanten.FELD_FESTE_MAUER;
+		//this.feldArray[0][2] =  Konstanten.FELD_FREI;
+		//System.out.println("Mauer initialized.");
+		//test codes end----------
+
+	}
+	
+
+>>>>>>> 7604a93fa1f456f9bb4f4074357bd3658e3df8f0
 }
