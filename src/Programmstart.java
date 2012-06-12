@@ -1,4 +1,8 @@
-
+/**
+ * 
+ * @author Archie
+ *
+ */
 public class Programmstart {
 
 	//Ab in die Logik 
@@ -12,7 +16,7 @@ public class Programmstart {
 		}
 		catch (Exception exc)
 		{
-		
+                    System.out.println("Exception Caught!");
 		}
 	}
 }
