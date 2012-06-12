@@ -1,6 +1,5 @@
 /**
  * Alle Gegenstaende, inklusive Bombmann, Monster, Bomb, Mauer etc...
- * Alle Gegenstaende, inklusive Bombmann, Monster, Bomb, sogar Mauer, wenn Sie wollen.
  * @author jingwen
  *
  */
