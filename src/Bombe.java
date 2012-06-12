@@ -20,11 +20,9 @@ public class Bombe extends TimerTask
 	
 	eine bombe zuenden:
 		.explode(int Owner)
-<<<<<<< HEAD
-			* <Owner> gibt hier an, wem die Punkte fuer die Explosion angerechnet werden sollen
-=======
-			* <Owner> gibt hier an, wem die Punkte für die Explosion angerechnet werden sollen
->>>>>>> 7604a93fa1f456f9bb4f4074357bd3658e3df8f0
+		* <Owner> gibt hier an, wem die Punkte fuer die Explosion angerechnet werden sollen
+		* <Owner> gibt hier an, wem die Punkte für die Explosion angerechnet werden sollen
+
 	
 	eine bombe aus dem spiel entfernen (ohne sie vorher zu zuenden):
 		.destroy()
@@ -71,11 +69,9 @@ public class Bombe extends TimerTask
     
     public void destroy()
     {
-<<<<<<< HEAD
         // wenn die bombe hochgegangen ist, brennt die lunte nicht mehr
-=======
         // wenn die bombe hochgegangen ist, brennt die lunte net mehr
->>>>>>> 7604a93fa1f456f9bb4f4074357bd3658e3df8f0
+
         if (fuse!=null)
         {
                 fuse.cancel();
