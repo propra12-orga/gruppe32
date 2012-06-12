@@ -1,14 +1,13 @@
 import java.util.*; // hier waer evtl gut, dass nochma einzugrenzen
 
-<<<<<<< HEAD
+
 /**
  * 
  * @author Jeremiah
  *
  */
 
-=======
->>>>>>> 7604a93fa1f456f9bb4f4074357bd3658e3df8f0
+
 public class Bombe extends TimerTask
 {
 /*
@@ -185,4 +184,4 @@ public class Bombe extends TimerTask
         this.fuse = new Timer();
         this.fuse.schedule(this,1,1000);
     }
-};
+}
