@@ -1,10 +1,6 @@
 
 /**
-<<<<<<< HEAD
  * Hauptlogik der Steuerung des Bombmanns wird hier implementiert.
-=======
- * Hauptlogik von Steurung des Bombmanns wird hier implementiert.
->>>>>>> 7604a93fa1f456f9bb4f4074357bd3658e3df8f0
  * @author Jingwen
  *
  */
@@ -15,17 +11,10 @@ public class Bombmann extends Gegenstand {
 	public Spielfeld s; // Referenz auf das Spielfeld
 	
 	/**
-<<<<<<< HEAD
 	 * @param sf
 	 * @throws BombMannException
 	 */
 
-=======
-	 * Bombmann konstruktuieren mit moeglichst links oben initialen Platz
-	 * @param sf Referenz auf spielfeld 
-	 * @throws BombMannException @see {@link Bombmann#initialize(int, int)}
-	 */
->>>>>>> 7604a93fa1f456f9bb4f4074357bd3658e3df8f0
 	public Bombmann(Spielfeld sf) 
 		throws BombMannException
 	{
@@ -34,15 +23,9 @@ public class Bombmann extends Gegenstand {
 	}
 	
 	/**
-<<<<<<< HEAD
 	 * setze Bombmann auf vorgegebenen Platz auf dem Spielfeld.
 	 * Falls der vorgegebener Platz von anderem Objekt besetzt wird, 
-	 * wird der n‰chstmˆgliche freie Platz rechts unten gesucht.
-=======
-	 * Bombmann konstruktuieren mit vorgegebenen Platz auf dem Spielfeld.
-	 * Falls der angegebene Platz von anderem Objekt besetzt wird, 
-	 * wird es weiter nach recht-unten freien Platz suchen.
->>>>>>> 7604a93fa1f456f9bb4f4074357bd3658e3df8f0
+	 * wird der n√§chstm√∂gliche freie Platz rechts unten gesucht.
 	 * 
 	 * @param sf Referenz auf spielfeld 
 	 * @param x Angegebene Zeile
@@ -58,13 +41,8 @@ public class Bombmann extends Gegenstand {
 	}
 	
 	/**
-<<<<<<< HEAD
-	 * Bombmann initializieren hˆchstmˆglich linkem Platz.
+	 * Bombmann initializieren h√∂chstm√∂glich linkem Platz.
 	 * Wirft exception, falls kein freier Platzvorhanden.
-=======
-	 * Bombmann initializieren von moeglichst obenlinks, wo noch frei ist.
-	 * Wirft eine Ausnahme, falls keinen freien Platz gibt auf dem Bild.
->>>>>>> 7604a93fa1f456f9bb4f4074357bd3658e3df8f0
 	 * 
 	 * @param x Koordinator fuer Zeilen
 	 * @param y Koordinator fuer Spalten
@@ -101,7 +79,6 @@ public class Bombmann extends Gegenstand {
 	{
 		int x = this.getX();
 		int y = this.getY();
-<<<<<<< HEAD
 		if (y > 1)
 		{
 	        if (this.s.begehbar(x, y-1)==true)
@@ -121,22 +98,11 @@ public class Bombmann extends Gegenstand {
 		}
 	}
 	
-=======
-		if (y > 1) {
-                        if (this.s.begehbar(x, y-1)==true) {
-				this.s.feldArray[x][y] = Konstanten.FELD_FREI;
-				this.s.feldArray[x][y - 1] = Konstanten.FELD_BOMBERMAN;
-				this.setY(y - 1);
-			}
-		}
-	}
->>>>>>> 7604a93fa1f456f9bb4f4074357bd3658e3df8f0
 	public void moveRight()
 	{
 		int x = this.getX();
 		int y = this.getY();
 		if (y < Konstanten.FELD_ANZAHL_SPALTEN - 1) {
-<<<<<<< HEAD
 			if (this.s.begehbar(x, y+1)==true)
 	        {
 	        	this.s.feldArray[x][y] = Konstanten.FELD_FREI;
@@ -154,22 +120,11 @@ public class Bombmann extends Gegenstand {
 		}
 	}
 	
-=======
-			if (this.s.begehbar(x, y+1)==true) {
-				this.s.feldArray[x][y] = Konstanten.FELD_FREI;
-				this.s.feldArray[x][y + 1] = Konstanten.FELD_BOMBERMAN;
-				this.setY(y + 1);
-			}
-		}
-				
-	}
->>>>>>> 7604a93fa1f456f9bb4f4074357bd3658e3df8f0
 	public void moveUp()
 	{
 		int x = this.getX();
 		int y = this.getY();
 		if (x > 1) {
-<<<<<<< HEAD
 			if (this.s.begehbar(x-1, y)==true)
 	        {
 	        	this.s.feldArray[x][y] = Konstanten.FELD_FREI;
@@ -188,21 +143,11 @@ public class Bombmann extends Gegenstand {
 	}
 	
 
-=======
-			if (this.s.begehbar(x-1, y)==true) {
-				this.s.feldArray[x][y] = Konstanten.FELD_FREI;
-				this.s.feldArray[x - 1][y] = Konstanten.FELD_BOMBERMAN;
-				this.setX(x - 1);
-			}
-		}
-	}
->>>>>>> 7604a93fa1f456f9bb4f4074357bd3658e3df8f0
 	public void moveDown()
 	{
 		int x = this.getX();
 		int y = this.getY();
 		if (x < Konstanten.FELD_ANZAHL_ZEILEN - 1) {
-<<<<<<< HEAD
 			if (this.s.begehbar(x+1, y)==true)
 	        {
 	        	this.s.feldArray[x][y] = Konstanten.FELD_FREI;
@@ -239,15 +184,3 @@ public class Bombmann extends Gegenstand {
 }
 	
 
-=======
-			if (this.s.begehbar(x+1, y)==true) {
-				this.s.feldArray[x][y] = Konstanten.FELD_FREI;
-				this.s.feldArray[x + 1][y] = Konstanten.FELD_BOMBERMAN;
-				this.setX(x + 1);
-			}
-		}
-	}
-
-
-}
->>>>>>> 7604a93fa1f456f9bb4f4074357bd3658e3df8f0
