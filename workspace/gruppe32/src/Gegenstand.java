@@ -1,5 +1,6 @@
 /**
- * Alle Gegenstaende, inklusive Bombmann, Monster, Bomb, Mauer etc...
+ * ableitende Klasse fuer alle 
+ * Spielgegenstaende, wie Monster, Bomberman, zerstoerbare Mauer etc...
  * @author jingwen
  *
  */

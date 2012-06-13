@@ -12,7 +12,7 @@ public class Programmstart {
 		{
 			Logik logik =  new Logik();
 			
-			logik.StarteLogik();
+			logik.StarteLogik("");
 		}
 		catch (Exception exc)
 		{

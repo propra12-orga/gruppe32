@@ -1,5 +1,5 @@
 /**
- * simples enum zur Abfrage der Spielsituation
+ * simples enum Grundgerüst zur Abfrage der Spielsituation
  * @author Archie
  *
  */

@@ -4,6 +4,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
+
+import java.awt.event.ActionListener;
 import java.io.File;
 
 import java.util.Map;
@@ -112,7 +114,7 @@ public class Spielfeld
 	 
 		return nValue.getNodeValue();
    }
-		   
+	
     public boolean begehbar(int x, int y)
     {
         return (
@@ -132,7 +134,7 @@ public class Spielfeld
 		this.Initialisieren();
 	
 		/*	
-		 * SCHREIBKRAM FUER LEVEL 1 ERSPART
+		 * SCHREIBKRAM FUER FESTE MAUERN (LEVEL1) xml
 		 * for (int i = 0; i < 1; i++)
 			for (int j = 0; j < Konstanten.FELD_ANZAHL_SPALTEN; j++)
 			{
